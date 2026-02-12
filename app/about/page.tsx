@@ -1,53 +1,76 @@
 "use client";
 
+import { useEffect, useState } from "react";
 
 const AboutMe = () => {
     const skills = [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Next.js",
-        "Tailwind CSS",
-        "Git",
-        "Responsive Design",
+        { name: "HTML", level: 95, label: "Advanced" },
+        { name: "CSS", level: 90, label: "Advanced" },
+        { name: "JavaScript", level: 85, label: "Advanced" },
+        { name: "TypeScript", level: 75, label: "Intermediate" },
+        { name: "React", level: 80, label: "Advanced" },
+        { name: "Next.js", level: 75, label: "Intermediate" },
+        { name: "Tailwind CSS", level: 90, label: "Advanced" },
+        { name: "Git", level: 70, label: "Intermediate" },
+        { name: "Responsive Design", level: 90, label: "Advanced" },
     ];
 
+    const [animate, setAnimate] = useState(false);
+
+    useEffect(() => {
+        setAnimate(true);
+    }, []);
+
     return (
-        <>
-            <section className="py-14">
-                <div className="containers">
-                    {/* About Me */}
-                    <div>
-                        <h1 className="text-2xl md:text-3xl font-semibold text-sky-500 mb-4">
-                            About Me:
-                        </h1>
-                        <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl">
-                            I’m a Frontend Developer, creating interactive and user-friendly web applications. I turn designs into clean and high-quality code using React and modern JavaScript frameworks. I constantly learn new technologies to improve my skills and bring creativity and attention to detail to every project.
-                        </p>
-                    </div>
+        <section className="pt-16 pb-28 md:pb-12 min-h-screen">
+            <div className="containers">
 
-                    {/* Skills */}
-                    <div className="pt-5">
-                        <h2 className="text-2xl md:text-3xl font-semibold text-sky-500 pb-4">
-                            Skills:
-                        </h2>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                            {skills.map((skill) => (
-                                <div
-                                    key={skill}
-                                    className="bg-[#1e293b] text-sky-400 py-2 px-4 rounded-full text-sm font-semibold shadow hover:bg-sky-500 hover:text-white hover:-translate-y-1 transition-all duration-300"
-                                >
-                                    {skill}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
+                {/* About Me */}
+                <div className="pb-5 md:pb-10">
+                    <h1 className="text-2xl md:text-3xl font-semibold text-sky-500 pb-2 md:pb-4">
+                        About Me:
+                    </h1>
+                    <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                        I am a passionate Frontend Developer who transforms complex ideas into sleek,
+                        interactive web experiences. With expertise in React, Next.js, and modern JavaScript,
+                        I craft responsive and visually stunning interfaces that engage users. I thrive on solving
+                        challenges, continuously learning new technologies, and delivering high-quality code
+                        with precision and creativity. Every project I build reflects my commitment to
+                        performance, accessibility, and aesthetic excellence.
+                    </p>
                 </div>
-            </section>
-        </>
+
+                {/* Skills */}
+                <div>
+                    <h2 className="text-2xl md:text-3xl font-semibold text-sky-500 pb-3 md:pb-6">
+                        Technologies:
+                    </h2>
+
+                    <div className="space-y-3 md:space-y-5">
+                        {skills.map((skill) => (
+                            <div key={skill.name} className="w-full">
+
+                                {/* Top row */}
+                                <div className="flex justify-between mb-1">
+                                    <span className="text-gray-200 font-medium">{skill.name}</span>
+                                    <span className="text-gray-400 text-sm">{skill.label}</span>
+                                </div>
+
+                                {/* Progress bar */}
+                                <div className="w-full h-3 bg-[#1e3a5f] rounded-full overflow-hidden">
+                                    <div
+                                        className={`h-full rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 transition-all duration-1000`}
+                                        style={{ width: animate ? `${skill.level}%` : "0%" }}
+                                    />
+                                </div>
+
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+            </div>
+        </section>
     );
 };
 

@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import "./globals.css"; // Tailwind CSS import
+import "./globals.css";
 
 export const metadata = {
   title: "My Portfolio",
@@ -13,18 +13,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-[#0f1524] text-white">
         <div className="flex flex-col min-h-screen">
 
-          {/* Navbar qotib turadi */}
+          {/* Navbar sticky */}
           <header className="sticky top-0 z-50">
             <Navbar />
           </header>
 
-          {/* Main content */}
-          <main className="flex-1">
+          <main className="flex-1 pb-20">
             {children}
           </main>
 
-          {/* Footer pastga yopishadi */}
-          <footer className="mt-auto">
+          {/* Footer sticky bottom */}
+          <footer className="fixed bottom-0 left-0 w-full z-50">
             <Footer />
           </footer>
 
