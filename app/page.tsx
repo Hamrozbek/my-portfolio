@@ -20,7 +20,7 @@ const HomePage = () => {
 
         {/* Text block */}
         <div
-          className={`flex-1 text-center pb-5 md:text-left transition-all duration-1000 ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          className={`flex-1 text-center pb-10 md:text-left transition-all duration-1000 ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
         >
           <h2 className="text-2xl md:text-3xl font-semibold mb-2">Hello, I'm</h2>
