@@ -14,7 +14,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <section className="pt-20 pb-10 md:pb-12">
+    <section className="pt-20">
       <div className="containers flex flex-col-reverse md:flex-row items-center md:justify-between gap-8 md:gap-10">
 
         {/* Text block */}
