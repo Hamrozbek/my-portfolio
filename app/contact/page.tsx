@@ -73,7 +73,7 @@ const ContactMe = () => {
                 Connect with me:
               </h1>
               <p className="text-gray-300 text-base md:text-lg">
-                Like what you see? Please contact me
+                If you like what you see, feel free to get in touch.
               </p>
             </div>
 
@@ -117,10 +117,10 @@ const ContactMe = () => {
           </div>
 
           {/* Right - Contact Form */}
-          <div className={`py-10 transition-all duration-700 ${animate ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+          <div className={`pt-8 transition-all duration-700 ${animate ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="w-full md:w-[500px] bg-[#1a2035] p-6 rounded-lg shadow-lg">
               <h2 className="text-xl md:text-2xl font-semibold text-white mb-4">
-                Contact me, let’s make magic together
+                Contact me and let’s achieve great results together.
               </h2>
               <form className="flex flex-col gap-4" onSubmit={sendToTelegram}>
                 <input
