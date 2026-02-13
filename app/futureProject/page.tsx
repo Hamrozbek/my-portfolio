@@ -5,14 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 // img 
-import logenImg from "@/public/login.jpg"
+import TodoImg from "@/public/todo.png"
 
 const FutureProjects = () => {
     const futureProjects = [
         {
             id: 1,
-            title: "Logen & Register",
-            image: logenImg
+            title: "ToDo List",
+            image: TodoImg
         },
     ];
 
@@ -61,10 +61,11 @@ const FutureProjects = () => {
 
                             {/* Content */}
                             <div className="relative z-10 p-6 text-center h-[200px] flex flex-col justify-center">
-                                <span className="inline-block mb-2 px-3 py-1 font-semibold rounded-full
-                                 bg-sky-500/10 text-sky-500 text-sm sm:text-base">
+                                <span className="inline-block mb-2 px-4 py-1 font-semibold rounded-full
+                                    bg-sky-500 text-white text-sm sm:text-base w-max mx-auto">
                                     Planned
                                 </span>
+
 
                                 <h2 className="text-white text-lg sm:text-xl font-semibold mb-2">
                                     {project.title}

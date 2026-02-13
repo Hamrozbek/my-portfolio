@@ -21,22 +21,23 @@ const Projects = () => {
     },
     {
       id: 2,
+      title: "Login & Register",
+      description:
+        "Modern responsive Login & Register UI with username, email, password fields, 'Remember Me', password reset, and toast notifications.",
+      image: project3,
+      link: "https://login-register-vert.vercel.app/",
+      github: "https://github.com/Hamrozbek/Login-Register",
+    },
+    {
+      id: 3,
       title: "Metalix",
       description:
         "Metallix is a modern metal construction company based in Tashkent, Uzbekistan. We specialize in the manufacturing of metal structures, metal grilles, and custom-designed solutions for industrial and commercial projects.",
       image: project2,
       link: "https://metalix-rho.vercel.app/ru",
       github: "https://github.com/Steelgrou/metalix",
-    },
-    {
-      id: 3,
-      title: "Agent",
-      description:
-        "This project is a modern and responsive CoinBase Sign In page UI designed with a clean and minimal style. The interface provides users with a simple and smooth login experience using email and password fields.",
-      image: project3,
-      link: "https://agent-ten-amber.vercel.app/",
-      github: "https://github.com/Hamrozbek/Agent",
-    },
+    }
+
   ];
 
   const [animate, setAnimate] = useState(false);
@@ -59,13 +60,14 @@ const Projects = () => {
             <div
               key={project.id}
               className={`group bg-[#1e293b] rounded-lg overflow-hidden shadow-md
-              hover:shadow-xl hover:-translate-y-4 transform transition-all duration-200`}
+  hover:shadow-xl hover:-translate-y-4 transform transition-all duration-200 flex flex-col`}
               style={{
                 opacity: animate ? 1 : 0,
                 transform: animate ? "translateY(0)" : "translateY(40px)",
                 transition: `all 0.8s ease-out ${index * 0.2}s`,
               }}
             >
+              {/* Image */}
               <div className="relative w-full h-56 sm:h-48 md:h-48 cursor-pointer overflow-hidden">
                 <Image
                   src={project.image}
@@ -75,23 +77,25 @@ const Projects = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="p-4">
+
+              {/* Content */}
+              <div className="p-4 flex flex-col flex-1">
                 <h2 className="text-sky-500 font-bold text-lg sm:text-xl md:text-[20px]">
                   {project.title}
                 </h2>
 
-                <p className="text-gray-300 text-sm sm:text-base md:text-[14px] line-clamp-none">
+                <p className="text-gray-300 text-sm sm:text-base md:text-[14px] line-clamp-none mt-2 flex-1">
                   {project.description}
                 </p>
 
-
-                <div className="flex flex-col sm:flex-row justify-center sm:justify-between gap-3 pt-5">
+                {/* Links – pastga yopishtirish uchun mt-auto */}
+                <div className="flex flex-col sm:flex-row justify-center sm:justify-between gap-3 mt-4">
                   <Link
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-5 py-1 border-2 border-sky-500 rounded-md font-semibold text-white
-                      transition-colors duration-300 hover:bg-sky-500 text-center"
+          transition-colors duration-300 hover:bg-sky-500 text-center"
                   >
                     View Live
                   </Link>
@@ -101,13 +105,14 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-5 py-1 border-2 border-sky-500 rounded-md font-semibold text-white
-                      transition-colors duration-300 hover:bg-sky-500 text-center"
+          transition-colors duration-300 hover:bg-sky-500 text-center"
                   >
                     Github Repo
                   </Link>
                 </div>
               </div>
             </div>
+
           ))}
         </div>
 
