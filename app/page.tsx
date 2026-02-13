@@ -9,18 +9,17 @@ import { useEffect, useState } from "react";
 const HomePage = () => {
   const [animate, setAnimate] = useState(false);
 
-  // page loadda animatsiyani ishga tushurish
   useEffect(() => {
     setAnimate(true);
   }, []);
 
   return (
-    <section className="pt-20">
+    <section className="pt-20 pb-20 md:pb-12">
       <div className="containers flex flex-col-reverse md:flex-row items-center md:justify-between gap-8 md:gap-10">
 
         {/* Text block */}
         <div
-          className={`flex-1 text-center pb-10 md:text-left transition-all duration-1000 ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          className={`flex-1 text-center md:text-left transition-all duration-1000 ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
         >
           <h2 className="text-2xl md:text-3xl font-semibold mb-2">Hello, I'm</h2>
