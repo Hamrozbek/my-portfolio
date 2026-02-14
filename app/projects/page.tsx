@@ -60,7 +60,7 @@ const Projects = () => {
             <div
               key={project.id}
               className={`group bg-[#1e293b] rounded-lg overflow-hidden shadow-md
-  hover:shadow-xl hover:-translate-y-4 transform transition-all duration-200 flex flex-col`}
+              hover:shadow-xl hover:-translate-y-4 transform transition-all duration-200 flex flex-col`}
               style={{
                 opacity: animate ? 1 : 0,
                 transform: animate ? "translateY(0)" : "translateY(40px)",
