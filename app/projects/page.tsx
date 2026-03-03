@@ -7,12 +7,13 @@ import Link from "next/link";
 import project1 from "@/public/hero.webp";
 import project2 from "@/public/metallix.png";
 import project3 from "@/public/image.png";
+import project4 from "@/public/tohvil.jpg"
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "East Way",
+      title: "East Way Travel",
       description:
         "A modern travel platform showcasing hotels and tours across four countries. Built with HTML, CSS, and React, focusing on clean UI, smooth navigation, and a user-friendly experience.",
       image: project1,
@@ -21,7 +22,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Login & Register",
+      title: "Login & Register System",
       description:
         "Modern responsive Login & Register UI with username, email, password fields, 'Remember Me', password reset, and toast notifications.",
       image: project3,
@@ -30,12 +31,21 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Metalix",
+      title: "Metallix Corporate Website",
       description:
         "Metallix is a modern metal construction company based in Tashkent, Uzbekistan. We specialize in the manufacturing of metal structures, metal grilles, and custom-designed solutions for industrial and commercial projects.",
       image: project2,
       link: "https://metalix-rho.vercel.app/ru",
       github: "https://github.com/Steelgrou/metalix",
+    },
+    {
+      id: 4,
+      title: "Tashkent Industrial Zones Portal",
+      description:
+        "Official portal of Tashkent Region administration providing transparent information and digital services. Focused on user-friendly interface and easy access to regional resources.",
+      image: project4,
+      link: "https://www.toshvil-sz.uz/uz",
+      github: "https://github.com/Steelgrou/toshvil",
     }
 
   ];
